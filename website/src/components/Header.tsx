@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
   { href: "#problem", label: "Problem" },
@@ -11,27 +12,42 @@ const navLinks = [
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
-    <header className="fixed top-0 z-50 w-full border-b border-border/50 bg-background/80 backdrop-blur-xl">
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
-        <a href="#" className="text-lg font-semibold tracking-tight">
-          AK<span className="text-accent">.</span>
+    <motion.header
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.6, ease: [0.25, 0.4, 0, 1] }}
+      className={`fixed top-0 z-50 w-full transition-all duration-500 ${
+        scrolled ? "glass" : ""
+      }`}
+    >
+      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-10">
+        <a href="#" className="text-xl font-bold tracking-tight">
+          AK<span className="gradient-text">.</span>
         </a>
 
-        <nav className="hidden items-center gap-8 md:flex">
+        <nav className="hidden items-center gap-10 md:flex">
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="text-sm text-muted transition-colors hover:text-foreground"
+              className="group relative text-[15px] text-fg-muted transition-colors hover:text-fg"
             >
               {link.label}
+              <span className="absolute -bottom-1 left-0 h-px w-0 bg-accent transition-all duration-300 group-hover:w-full" />
             </a>
           ))}
           <a
             href="#kontakt"
-            className="rounded-lg bg-accent px-4 py-2 text-sm font-medium text-white transition-opacity hover:opacity-90"
+            className="relative overflow-hidden rounded-full bg-fg px-6 py-2.5 text-[15px] font-medium text-bg transition-transform hover:scale-105"
           >
             Gespräch buchen
           </a>
@@ -39,42 +55,57 @@ export default function Header() {
 
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className="flex flex-col gap-1.5 md:hidden"
+          className="relative z-50 flex h-10 w-10 flex-col items-center justify-center gap-1.5 md:hidden"
           aria-label="Menü"
         >
-          <span
-            className={`h-0.5 w-6 bg-foreground transition-transform ${menuOpen ? "translate-y-2 rotate-45" : ""}`}
+          <motion.span
+            animate={menuOpen ? { rotate: 45, y: 8 } : { rotate: 0, y: 0 }}
+            className="h-[1.5px] w-6 bg-fg"
           />
-          <span
-            className={`h-0.5 w-6 bg-foreground transition-opacity ${menuOpen ? "opacity-0" : ""}`}
+          <motion.span
+            animate={menuOpen ? { opacity: 0 } : { opacity: 1 }}
+            className="h-[1.5px] w-6 bg-fg"
           />
-          <span
-            className={`h-0.5 w-6 bg-foreground transition-transform ${menuOpen ? "-translate-y-2 -rotate-45" : ""}`}
+          <motion.span
+            animate={menuOpen ? { rotate: -45, y: -8 } : { rotate: 0, y: 0 }}
+            className="h-[1.5px] w-6 bg-fg"
           />
         </button>
       </div>
 
-      {menuOpen && (
-        <nav className="flex flex-col gap-4 border-t border-border/50 bg-background px-6 py-6 md:hidden">
-          {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              onClick={() => setMenuOpen(false)}
-              className="text-sm text-muted transition-colors hover:text-foreground"
-            >
-              {link.label}
-            </a>
-          ))}
-          <a
-            href="#kontakt"
-            onClick={() => setMenuOpen(false)}
-            className="rounded-lg bg-accent px-4 py-2 text-center text-sm font-medium text-white"
+      <AnimatePresence>
+        {menuOpen && (
+          <motion.nav
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            className="overflow-hidden border-t border-border bg-bg md:hidden"
           >
-            Gespräch buchen
-          </a>
-        </nav>
-      )}
-    </header>
+            <div className="flex flex-col gap-6 px-6 py-8">
+              {navLinks.map((link, i) => (
+                <motion.a
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setMenuOpen(false)}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: i * 0.05 }}
+                  className="text-lg text-fg-muted transition-colors hover:text-fg"
+                >
+                  {link.label}
+                </motion.a>
+              ))}
+              <a
+                href="#kontakt"
+                onClick={() => setMenuOpen(false)}
+                className="mt-2 rounded-full bg-fg px-6 py-3 text-center text-[15px] font-medium text-bg"
+              >
+                Gespräch buchen
+              </a>
+            </div>
+          </motion.nav>
+        )}
+      </AnimatePresence>
+    </motion.header>
   );
 }

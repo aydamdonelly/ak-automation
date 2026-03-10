@@ -1,7 +1,7 @@
 # Kommunikations-Stil
 
 ## Profil (fuer Outreach/Content)
-- Adam Kahirov, 21, Stuttgart
+- Adam Kahirov, 20, Stuttgart
 - IBM Research Alumnus (Dublin, Almaden, Tokyo)
 - Schwerpunkt: LLM-Systeme, Quantisierung, Retrieval, AI-Evaluation
 - BSc Business Informatics - Data Science, DHBW Stuttgart (Abschluss Sept 2026)
