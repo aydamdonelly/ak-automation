@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { MDXRemote } from "next-mdx-remote/rsc";
 import Logo from "@/components/Logo";
 import { getAllPosts, getPostBySlug } from "@/lib/blog";
 
@@ -27,15 +28,6 @@ export default async function BlogPost({ params }: Props) {
   const { slug } = await params;
   const post = getPostBySlug(slug);
   if (!post) notFound();
-
-  // Dynamic import of MDX file
-  let MDXContent;
-  try {
-    const mod = await import(`@/content/blog/${slug}.mdx`);
-    MDXContent = mod.default;
-  } catch {
-    notFound();
-  }
 
   return (
     <div className="min-h-screen bg-bg text-fg">
@@ -82,7 +74,7 @@ export default async function BlogPost({ params }: Props) {
         </div>
 
         <article className="prose prose-invert max-w-none prose-headings:font-bold prose-headings:tracking-tight prose-p:text-fg-muted prose-p:leading-relaxed prose-a:text-accent prose-strong:text-fg prose-li:text-fg-muted prose-h2:mt-12 prose-h2:mb-4 prose-h3:mt-8 prose-h3:mb-3">
-          <MDXContent />
+          <MDXRemote source={post.content} />
         </article>
 
         <div className="mt-20 border-t border-border pt-10">

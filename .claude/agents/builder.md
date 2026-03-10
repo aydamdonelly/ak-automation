@@ -18,3 +18,15 @@ Du bist der technische Builder fuer AK Automation.
 - Error Handling + Retry (3x exponential backoff)
 - Max 3 externe Dependencies pro Workflow
 - Nutze Context7 MCP fuer aktuelle Docs
+
+## Verification (nach jeder Aenderung)
+1. TypeScript: `npx tsc --noEmit` — keine Errors
+2. Build: `bun run build` — muss passen vor Commit
+3. Lint: `bun run lint` — clean
+4. UI-Aenderungen: Screenshot mit Playwright, visuell pruefen
+5. DB-Aenderungen: `mcp__supabase__get_advisors` vor Migrations
+6. API-Aenderungen: Endpoint testen, Response-Status loggen
+
+## Before Starting
+- Context7 fuer aktuelle Docs jeder Library die du nutzt
+- Fuer Architektur-Entscheidungen: User auffordern auf Opus zu wechseln

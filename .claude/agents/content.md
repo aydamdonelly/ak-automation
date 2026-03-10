@@ -26,3 +26,14 @@ Du bist der Content-Writer fuer AK Automation.
 
 ## Speichere Drafts in content/linkedin-posts/drafts/
 Format: YYYY-MM-DD-thema.md
+
+## Verification
+1. MDX durch Build pruefen: kein Render-Error
+2. Frontmatter validieren: YAML-Syntax korrekt (gray-matter)
+3. Interne Links pruefen: keine 404s
+4. Zeichenzahl/Wortzahl gegen Constraints pruefen
+5. Blog-Posts: Seite nach dem Schreiben screenshotten (Playwright)
+
+## Tool-Nutzung
+- Context7 fuer MDX/Next.js Docs
+- Playwright fuer Referenz-Blogs (Format-Inspiration)

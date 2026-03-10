@@ -11,6 +11,9 @@ export default function Footer() {
           </span>
         </div>
         <div className="flex gap-8 text-sm text-fg-dim">
+          <a href="/blog" className="transition-colors hover:text-fg">
+            Blog
+          </a>
           <a href="https://linkedin.com/in/adamkahirov" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-fg">
             LinkedIn
           </a>

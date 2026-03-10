@@ -5,7 +5,8 @@
       "mcp__github__*",
       "mcp__supabase__*",
       "mcp__playwright__*",
-      "mcp__sequential-thinking__*"
+      "mcp__sequential-thinking__*",
+      "mcp__memory__*"
     ]
   },
   "hooks": {
@@ -15,7 +16,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "file=$(echo $TOOL_INPUT | grep -o '\"file_path\":\"[^\"]*\"' | cut -d'\"' -f4); if [[ \"$file\" == *.ts || \"$file\" == *.tsx ]]; then cd /Users/adamkahirov/Desktop/code/ak-automation && npx tsc --noEmit 2>&1 | head -10; fi"
+            "command": "file=$(echo $TOOL_INPUT | grep -o '\"file_path\":\"[^\"]*\"' | cut -d'\"' -f4); if [[ \"$file\" == *.ts || \"$file\" == *.tsx ]]; then cd /Users/adamkahirov/Desktop/code/ak-automation/website && npx tsc --noEmit 2>&1 | head -10 && bun run lint 2>&1 | head -10; fi"
           }
         ]
       }

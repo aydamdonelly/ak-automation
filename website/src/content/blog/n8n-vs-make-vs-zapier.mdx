@@ -1,0 +1,236 @@
+---
+title: "n8n vs. Make vs. Zapier: Welches Automatisierungstool für deutsche Unternehmen?"
+description: "Detaillierter Vergleich von n8n, Make und Zapier für deutsche KMUs — Preis, DSGVO, Self-Hosting, Lernkurve und Empfehlung je Anwendungsfall."
+date: "2026-03-10"
+readingTime: "13 min"
+tags: ["n8n", "Make", "Zapier", "Automatisierung", "Vergleich"]
+---
+
+**Für deutsche KMUs, die DSGVO-Konformität und volle Kontrolle über ihre Daten brauchen, ist n8n die beste Wahl. Make bietet den besten Kompromiss aus Einfachheit und Leistung. Zapier eignet sich für einfache Automationen ohne technisches Know-how.**
+
+Das ist die Kurzversion. Wenn Sie wissen wollen, warum — und welches Tool für Ihren konkreten Anwendungsfall das richtige ist — lesen Sie weiter.
+
+Wir bei AK Automation nutzen n8n für alle Kundenprojekte. Dieser Artikel erklärt transparent, warum — und wo Make oder Zapier die bessere Wahl sein können.
+
+---
+
+## Die drei Tools im Überblick
+
+### Zapier — Der Platzhirsch
+
+Gegründet 2011, mit über 7.000 App-Integrationen das größte Ökosystem. Zapier ist für Nicht-Techniker gebaut: Point-and-Click-Interface, Templates für häufige Workflows, minimale Lernkurve. Über 2 Millionen Unternehmen nutzen es weltweit.
+
+**Stärke:** Einfachheit. Wenn Sie "Wenn neue E-Mail, dann Slack-Nachricht" brauchen, sind Sie in 5 Minuten fertig.
+
+**Schwäche:** Bei komplexen Workflows wird es schnell teuer und unflexibel. Custom Code ist stark eingeschränkt. Server stehen in den USA.
+
+### Make (ehemals Integromat) — Der Allrounder
+
+Gegründet in Prag, 2020 umbenannt von Integromat zu Make. Visueller Workflow-Builder mit starker Logik-Engine. Kann deutlich komplexere Workflows als Zapier — bei niedrigerem Preis.
+
+**Stärke:** Balance aus Benutzerfreundlichkeit und Leistung. Visueller Builder macht auch komplexe Flows übersichtlich.
+
+**Schwäche:** Kein Self-Hosting möglich. Bei sehr hohem Volumen steigen die Kosten.
+
+### n8n — Der Open-Source-Herausforderer
+
+Gegründet 2019 in Berlin. Open-Source, self-hostbar, mit nativem Code-Support. n8n ist für technische Teams gebaut, die volle Kontrolle wollen — über den Workflow, die Daten und die Infrastruktur.
+
+**Stärke:** Self-Hosting auf eigenem Server (Deutschland möglich), keine Per-Operation-Kosten, volle Code-Freiheit (JavaScript/Python), native KI-Integration.
+
+**Schwäche:** Höhere Lernkurve. Weniger vorgefertigte Integrationen als Zapier. Braucht technisches Know-how für Setup und Wartung.
+
+---
+
+## Vergleichstabelle
+
+| Kriterium | n8n | Make | Zapier |
+|---|---|---|---|
+| **Preis (Einstieg)** | Kostenlos (Self-hosted) | Ab 9 Euro/Monat | Ab 20 Euro/Monat |
+| **Preis bei Skalierung** | Nur Serverkosten (5-20 Euro/Monat) | 16 Euro/Monat (10.000 Ops) | 49 Euro/Monat (750 Tasks) |
+| **DSGVO / Datenhaltung** | Eigener Server (DE möglich) | EU-Server verfügbar | US-Server (EU-Option gegen Aufpreis) |
+| **Self-Hosting** | Ja (Docker/Kubernetes) | Nein | Nein |
+| **Integrationen** | 400+ (wachsend) | 1.500+ | 7.000+ |
+| **KI-Integration** | Nativ (OpenAI, Claude, Ollama) | Ja (OpenAI, Claude) | Ja (eingeschränkt) |
+| **Custom Code** | Ja (JavaScript/Python) | Eingeschränkt (JavaScript) | Sehr eingeschränkt |
+| **API-Limits** | Keine (Self-hosted) | Operationen-basiert | Task-basiert |
+| **Lernkurve** | Mittel-Hoch | Mittel | Niedrig |
+| **Visueller Builder** | Ja | Ja (am besten) | Ja (einfachster) |
+| **Error Handling** | Umfangreich | Gut | Einfach |
+| **Versioning/Git** | Ja (native) | Nein | Nein |
+| **Support** | Community + Enterprise | E-Mail + Chat | E-Mail + Chat + Phone |
+| **Geeignet für** | Technische Teams, DSGVO-kritisch | Marketing, Operations | Nicht-technische User |
+
+---
+
+## Detailvergleich nach Kriterien
+
+### 1. Preis und Skalierung
+
+Die Preisstruktur unterscheidet sich fundamental:
+
+**Zapier** rechnet nach "Tasks" (jede Aktion in einem Workflow = 1 Task). Der kostenlose Plan erlaubt 100 Tasks/Monat. Ab 750 Tasks: 49 Euro/Monat. Bei 10.000 Tasks: 299 Euro/Monat. Bei hohem Volumen wird Zapier schnell vierstellig.
+
+**Make** rechnet nach "Operationen." 10.000 Operationen kosten 16 Euro/Monat. Das ist deutlich günstiger als Zapier bei vergleichbarem Volumen. Aber: Eine komplexe Automation mit 10 Schritten verbraucht 10 Operationen pro Durchlauf.
+
+**n8n** (self-hosted) hat keine Limits. Sie zahlen nur für den Server — typisch 5 bis 20 Euro/Monat auf Hetzner. Ob 100 oder 100.000 Durchläufe: gleicher Preis.
+
+**Kostenbeispiel bei 1.000 Workflow-Durchläufen pro Monat (je 5 Schritte):**
+
+| Tool | Monatliche Kosten |
+|---|---|
+| n8n (self-hosted) | 10 Euro (Hetzner VPS) |
+| Make | 16 Euro (10.000 Operationen) |
+| Zapier | 49-99 Euro (5.000 Tasks) |
+
+**Bei 10.000 Durchläufen pro Monat:**
+
+| Tool | Monatliche Kosten |
+|---|---|
+| n8n (self-hosted) | 10 Euro (gleicher Server) |
+| Make | 47 Euro (50.000 Operationen) |
+| Zapier | 299 Euro (50.000 Tasks) |
+
+n8n wird mit steigendem Volumen immer günstiger relativ zu den Alternativen.
+
+### 2. DSGVO und Datenschutz
+
+Für deutsche Unternehmen oft das entscheidende Kriterium.
+
+**n8n:** Volle Kontrolle. Self-hosted auf einem Hetzner-Server in Falkenstein oder Nürnberg — alle Daten bleiben in Deutschland. Kein Drittanbieter sieht Ihre Daten. Für Branchen mit strengen Datenschutzanforderungen (Gesundheit, Finanzen, Recht) ist das oft die einzige Option.
+
+**Make:** EU-Server verfügbar. Auftragsverarbeitungsvertrag (AVV) erhältlich. Für die meisten KMUs ausreichend DSGVO-konform. Aber: Make ist ein tschechisches Unternehmen mit US-Investoren — bei einem hypothetischen US-Behördenzugriff gelten andere Regeln als bei einem rein deutschen Server.
+
+**Zapier:** Primär US-Server. EU-Datenverarbeitung nur im Enterprise-Plan. Für personenbezogene Daten deutscher Kunden problematisch. Ein AVV ist verfügbar, aber die Datenübertragung in die USA bleibt ein rechtliches Risiko nach Schrems II.
+
+**Empfehlung:** Wenn Kundendaten durch den Workflow fließen (E-Mails, CRM-Daten, Bewerbungen, Rechnungen) → n8n auf deutschem Server. Wenn nur interne Daten verarbeitet werden → Make oder Zapier können ausreichen.
+
+### 3. Komplexität und Lernkurve
+
+**Zapier:** Am einfachsten zu lernen. Ein Nicht-Techniker kann in einer Stunde einen einfachen Workflow bauen. Die Oberfläche ist bewusst simpel gehalten — manchmal zu simpel: Wenn Sie Bedingungen, Schleifen oder Fehlerbehandlung brauchen, wird es mühsam.
+
+**Make:** Mittlere Lernkurve. Der visuelle Builder ist der beste der drei — komplexe Flows bleiben übersichtlich. Bedingungen, Router, Iteratoren sind gut gelöst. Ein technisch versierter Mitarbeiter lernt Make in 1-2 Tagen.
+
+**n8n:** Höchste Lernkurve. Dafür: Fast alles ist möglich. Custom Code-Knoten (JavaScript/Python) ermöglichen beliebige Logik. Git-Versionierung, Umgebungsvariablen, Sub-Workflows — n8n ist ein Entwicklertool mit visuellem Interface.
+
+**Faustregel:** Zapier für Teams ohne Technik-Erfahrung. Make für Marketing/Operations-Teams mit einem Power-User. n8n für Teams mit Entwickler oder wenn der Dienstleister baut.
+
+### 4. KI-Fähigkeiten
+
+Alle drei Tools bieten KI-Integrationen — aber auf unterschiedlichem Niveau:
+
+**n8n:** Native AI-Nodes für OpenAI, Claude (Anthropic), Ollama (lokale Modelle). Custom HTTP-Requests für jeden beliebigen KI-Anbieter. Code-Knoten ermöglichen RAG, Prompt Chaining, Memory und andere fortgeschrittene Patterns. n8n ist das einzige der drei Tools, das lokale KI-Modelle (Ollama) nativ unterstützt.
+
+**Make:** Gute OpenAI- und Claude-Integration. HTTP-Module für andere Anbieter. Aber: Custom Code ist eingeschränkter als bei n8n. Komplexe KI-Workflows (z. B. mehrstufige Verarbeitung mit Kontext-Weiterabe) sind schwieriger zu bauen.
+
+**Zapier:** Grundlegende KI-Integrationen (OpenAI, etc.). Für einfache Anwendungen (E-Mail zusammenfassen, Text generieren) ausreichend. Für alles darüber hinaus: zu eingeschränkt. Kein Custom Code, keine komplexen Prompt-Ketten.
+
+### 5. Erweiterbarkeit und Custom Code
+
+**n8n:** JavaScript und Python in Code-Knoten. npm-Pakete importierbar. Webhooks, WebSocket, GraphQL — alles nativ. Sie können n8n um beliebige Funktionen erweitern, ohne auf den Anbieter zu warten.
+
+**Make:** JavaScript in Custom-Modulen möglich, aber mit Einschränkungen (keine npm-Pakete, Sandbox-Umgebung). Für die meisten Anwendungsfälle ausreichend. Für fortgeschrittene Entwicklung: limitierend.
+
+**Zapier:** Minimal. "Code by Zapier" erlaubt einfaches JavaScript/Python, aber stark eingeschränkt (keine externen Bibliotheken, Timeout-Limits). Für alles, was über Textmanipulation hinausgeht: unbrauchbar.
+
+---
+
+## Empfehlung je Anwendungsfall
+
+### "Wir brauchen DSGVO-Konformität für Kundendaten"
+**n8n** — Self-hosted auf deutschem Server. Keine Datenübertragung an Dritte.
+
+### "Wir wollen schnell starten ohne Technik-Team"
+**Zapier** — In einer Stunde der erste Workflow. Für einfache Automatisierungen ideal.
+
+### "Wir brauchen komplexe Workflows mit Bedingungen und Schleifen"
+**n8n** oder **Make** — beide können das. n8n wenn Sie einen Entwickler haben, Make wenn nicht.
+
+### "Unser Budget ist unter 50 Euro pro Monat"
+**n8n** (self-hosted) — Kostenlos plus 5-10 Euro Serverkosten. Unschlagbar.
+
+### "Wir haben ein Entwicklerteam"
+**n8n** — Code-Knoten, Git-Versionierung, API-first. Fühlt sich wie ein Entwicklertool an, weil es eins ist.
+
+### "Marketing-Automatisierung (E-Mail, Social, CRM)"
+**Make** — Starke Integrationen mit Marketing-Tools, visueller Builder, gutes Preis-Leistungs-Verhältnis.
+
+### "KI-Automatisierung mit Claude oder GPT"
+**n8n** — Beste KI-Integration, Custom Code für Prompt Engineering, lokale Modelle möglich.
+
+### "Wir sind ein Microsoft-365-Unternehmen"
+**Power Automate** könnte hier sinnvoller sein als alle drei. Prüfen Sie zuerst, ob Ihre Anforderung dort abgedeckt ist.
+
+---
+
+## Warum wir n8n nutzen
+
+Bei AK Automation setzen wir n8n für alle Kundenprojekte ein. Das ist kein Zufall:
+
+### Self-hosted auf Hetzner (deutsche Server)
+Alle Kundendaten bleiben in Deutschland. Kein Drittanbieter — kein US-Unternehmen — sieht die Daten. Das ist für deutsche KMUs nicht verhandelbar.
+
+### Keine Per-Operation-Kosten
+Ein Festpreis-Sprint darf keine variablen Kosten für den Kunden erzeugen. Bei n8n zahlt der Kunde nur den Server (5-20 Euro/Monat) — egal wie viele Workflow-Durchläufe. Bei Zapier oder Make würden die Kosten mit dem Volumen steigen.
+
+### Volle KI-Integration
+Wir nutzen Claude (Anthropic) als Standard-KI-Modell. n8n hat native Integration und erlaubt Custom Code für komplexe Prompt-Ketten, RAG und mehrstufige Verarbeitung. Das ist mit Zapier oder Make in dieser Tiefe nicht möglich.
+
+### Git-Versionierung und Testing
+Workflows werden versioniert, können getestet und zurückgerollt werden. Das ist bei produktionskritischen Automatisierungen essenziell — und bei Make oder Zapier nicht verfügbar.
+
+### Transparenz
+
+Wir empfehlen n8n nicht, weil wir daran verdienen (es ist kostenlos). Wir empfehlen es, weil es die beste technische Lösung für die Anforderungen deutscher KMUs ist: Datenschutz, Kostenkontrolle, Erweiterbarkeit.
+
+---
+
+## Wann Sie NICHT n8n nehmen sollten
+
+Fairerweise — n8n ist nicht für jeden die richtige Wahl:
+
+- **Kein technisches Team und kein externer Dienstleister:** n8n braucht jemanden, der es aufsetzen und warten kann. Wenn das niemand bei Ihnen ist und Sie keinen Dienstleister beauftragen wollen → Zapier oder Make.
+- **Nur einfache Workflows:** Wenn Sie "Neue E-Mail → Slack-Nachricht" brauchen und sonst nichts → Zapier reicht und ist schneller eingerichtet.
+- **Marketing-First:** Wenn 90 % Ihrer Automatisierungen Marketing betreffen (E-Mail-Kampagnen, Social-Media-Posts, Lead-Scoring) → Make hat bessere Marketing-Integrationen.
+
+---
+
+## Häufig gestellte Fragen
+
+### Kann ich von Zapier zu n8n wechseln?
+
+Ja. Es gibt keinen automatischen Import, aber die meisten Zapier-Workflows lassen sich in n8n nachbauen — oft mit mehr Flexibilität. Bei komplexen Setups planen Sie 1-2 Tage für die Migration ein.
+
+### Ist n8n wirklich kostenlos?
+
+Die self-hosted Community Edition ist kostenlos und unbegrenzt nutzbar. Es gibt eine kostenpflichtige Cloud-Version (ab 20 Euro/Monat) und eine Enterprise-Version. Für die meisten KMU-Anwendungen reicht die kostenlose Community Edition.
+
+### Welches Tool hat den besten Support?
+
+Zapier hat den umfangreichsten Support (inklusive Telefon im Business-Plan). Make bietet guten E-Mail- und Chat-Support. n8n hat eine sehr aktive Community und ein Forum — aber keinen dedizierten Support in der kostenlosen Version.
+
+### Kann ich die Tools kombinieren?
+
+Ja, theoretisch. In der Praxis empfehle ich: Ein Tool, richtig eingesetzt. Zwei parallel zu betreiben verdoppelt die Wartung und Lernkurve.
+
+---
+
+## Fazit
+
+Die Wahl des richtigen Automatisierungstools hängt von drei Fragen ab:
+
+1. **Fließen Kundendaten durch den Workflow?** → n8n (DSGVO)
+2. **Haben Sie ein technisches Team oder einen Dienstleister?** → n8n. Wenn nein → Make oder Zapier.
+3. **Wie komplex sind Ihre Workflows?** → Einfach: Zapier. Mittel: Make. Komplex: n8n.
+
+Für die meisten deutschen KMUs mit Datenschutzanforderungen und dem Wunsch nach Kostenkontrolle ist n8n die richtige Wahl — vorausgesetzt, jemand kann es betreiben.
+
+### Nächster Schritt
+
+Sie wollen wissen, welches Tool für Ihren konkreten Prozess das richtige ist? Wir beraten Sie in einem kostenlosen 30-Minuten-Gespräch — tool-agnostisch und ehrlich.
+
+**[Kostenloses Erstgespräch vereinbaren](/#kontakt)**
+
+---
+
+*Weiterführend: [Prozesse automatisieren im Mittelstand](/blog/prozesse-automatisieren-mittelstand) | [Was KI-Automatisierung kostet](/blog/ki-automatisierung-kosten)*
