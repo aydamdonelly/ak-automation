@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Logo from "./Logo";
 
 const navLinks = [
   { href: "#problem", label: "Problem" },
@@ -29,9 +30,9 @@ export default function Header() {
         scrolled ? "glass" : ""
       }`}
     >
-      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-10">
-        <a href="#" className="text-xl font-bold tracking-tight">
-          AK<span className="gradient-text">.</span>
+      <div className="mx-auto flex h-20 max-w-350 items-center justify-between px-6 lg:px-10">
+        <a href="#" className="flex items-center gap-2">
+          <Logo size={36} />
         </a>
 
         <nav className="hidden items-center gap-10 md:flex">
@@ -39,7 +40,7 @@ export default function Header() {
             <a
               key={link.href}
               href={link.href}
-              className="group relative text-[15px] text-fg-muted transition-colors hover:text-fg"
+              className="group relative text-base font-medium text-fg-muted transition-colors hover:text-fg"
             >
               {link.label}
               <span className="absolute -bottom-1 left-0 h-px w-0 bg-accent transition-all duration-300 group-hover:w-full" />
@@ -47,7 +48,7 @@ export default function Header() {
           ))}
           <a
             href="#kontakt"
-            className="relative overflow-hidden rounded-full bg-fg px-6 py-2.5 text-[15px] font-medium text-bg transition-transform hover:scale-105"
+            className="relative overflow-hidden rounded-full bg-fg px-7 py-3 text-base font-medium text-bg transition-transform hover:scale-105"
           >
             Gespräch buchen
           </a>

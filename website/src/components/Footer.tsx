@@ -1,11 +1,11 @@
+import Logo from "./Logo";
+
 export default function Footer() {
   return (
     <footer className="border-t border-border px-6 py-10 lg:px-10">
-      <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 sm:flex-row">
+      <div className="mx-auto flex max-w-350 flex-col items-center justify-between gap-6 sm:flex-row">
         <div className="flex items-center gap-4">
-          <span className="text-lg font-bold">
-            AK<span className="gradient-text">.</span>
-          </span>
+          <Logo size={28} animate={false} />
           <span className="text-sm text-fg-dim">
             &copy; {new Date().getFullYear()} Adam Kahirov
           </span>

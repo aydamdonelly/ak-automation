@@ -1,6 +1,8 @@
 "use client";
 
-import { Reveal, StaggerContainer, StaggerItem, Counter } from "./motion";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Reveal } from "./motion";
 
 const useCases = [
   {
@@ -8,8 +10,6 @@ const useCases = [
     title: "AI-Angebotsassistent",
     before: "3 Stunden",
     after: "10 Minuten",
-    afterNum: 10,
-    unit: "Min",
     description:
       "Kundenanfragen kommen rein → AI erstellt Angebote basierend auf Ihrem Produktkatalog → Mitarbeiter prüft und klickt 'Senden'.",
     flow: ["Anfrage", "AI-Analyse", "Angebot", "Prüfung", "Versand"],
@@ -19,8 +19,6 @@ const useCases = [
     title: "E-Mail-Klassifizierung",
     before: "45 Minuten",
     after: "0 Minuten",
-    afterNum: 0,
-    unit: "Min",
     description:
       "AI liest eingehende E-Mails, erkennt Dringlichkeit und Kategorie, routet an die richtige Abteilung und legt Tickets an.",
     flow: ["E-Mail", "AI-Parsing", "Kategorie", "Routing", "Ticket"],
@@ -30,8 +28,6 @@ const useCases = [
     title: "Bestell-Pipeline",
     before: "2 Stunden",
     after: "5 Minuten",
-    afterNum: 5,
-    unit: "Min",
     description:
       "Bestellungen aus verschiedenen Kanälen werden automatisch erfasst, abgeglichen und ins ERP übertragen.",
     flow: ["Bestellung", "Erfassung", "Abgleich", "Validierung", "ERP"],
@@ -39,73 +35,148 @@ const useCases = [
 ];
 
 export default function UseCases() {
+  const [openIndex, setOpenIndex] = useState<number | null>(0);
+
   return (
-    <section id="anwendungen" className="relative px-6 py-32 lg:px-10">
-      <div className="mx-auto max-w-7xl">
+    <section id="anwendungen" className="py-32">
+      <div className="mx-auto max-w-350 px-6 lg:px-10">
         <Reveal>
-          <p className="mb-4 font-mono text-sm text-accent">// ANWENDUNGEN</p>
+          <div className="mb-4 flex items-center gap-4">
+            <span className="font-mono text-sm text-fg-dim">FIG 1.0</span>
+            <span className="h-px flex-1 bg-border" />
+          </div>
         </Reveal>
         <Reveal delay={0.1}>
-          <h2 className="mb-6 max-w-3xl text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
+          <h2 className="mb-6 max-w-4xl text-[clamp(2rem,5vw,4rem)] font-bold leading-[1.1] tracking-tight">
             Prozesse, die wir{" "}
             <span className="gradient-text">automatisieren.</span>
           </h2>
         </Reveal>
         <Reveal delay={0.2}>
-          <p className="mb-20 max-w-xl text-lg text-fg-muted">
-            Drei typische Beispiele. Ihr Prozess kann anders aussehen —
-            im Erstgespräch finden wir den richtigen.
+          <p className="mb-20 max-w-2xl text-lg text-fg-muted">
+            Drei typische Beispiele. Ihr Prozess kann anders aussehen — im
+            Erstgespräch finden wir den richtigen.
           </p>
         </Reveal>
 
-        {/* Bento grid */}
-        <StaggerContainer className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-          {useCases.map((uc) => (
-            <StaggerItem key={uc.title}>
-              <div className="group flex h-full flex-col rounded-2xl border border-border bg-bg-elevated transition-all duration-500 hover:border-border-hover hover:bg-bg-card">
-                {/* Header */}
-                <div className="border-b border-border p-6 pb-4">
-                  <div className="mb-3 flex items-center justify-between">
-                    <span className="rounded-full border border-accent/20 bg-accent/5 px-3 py-1 font-mono text-xs text-accent">
+        {/* Accordion */}
+        <div className="border-t border-border">
+          {useCases.map((uc, i) => (
+            <Reveal key={uc.title} delay={i * 0.05}>
+              <div className="border-b border-border">
+                {/* Row header */}
+                <button
+                  onClick={() => setOpenIndex(openIndex === i ? null : i)}
+                  className="flex w-full items-center justify-between py-6 text-left transition-colors hover:text-fg lg:py-8"
+                >
+                  <div className="flex items-center gap-4 lg:gap-6">
+                    <span className="font-mono text-sm text-fg-dim">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <span className="hidden rounded-full border border-accent/20 px-3 py-0.5 font-mono text-xs text-accent sm:inline-block">
                       {uc.tag}
                     </span>
-                    <div className="flex items-center gap-2 text-xs text-fg-dim">
+                    <span className="text-lg font-semibold lg:text-2xl">
+                      {uc.title}
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-4 lg:gap-6">
+                    <div className="hidden items-center gap-3 text-sm text-fg-dim sm:flex">
                       <span className="line-through">{uc.before}</span>
-                      <svg className="h-3 w-3 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                      </svg>
-                      <span className="font-semibold text-accent">{uc.after}</span>
+                      <span className="text-accent">&rarr;</span>
+                      <span className="font-semibold text-accent">
+                        {uc.after}
+                      </span>
                     </div>
+                    <motion.div
+                      animate={{ rotate: openIndex === i ? 45 : 0 }}
+                      transition={{ duration: 0.2 }}
+                      className="flex h-8 w-8 items-center justify-center"
+                    >
+                      <svg
+                        className="h-5 w-5 text-fg-dim"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        strokeWidth={1.5}
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M12 4.5v15m7.5-7.5h-15"
+                        />
+                      </svg>
+                    </motion.div>
                   </div>
-                  <h3 className="text-lg font-semibold">{uc.title}</h3>
-                </div>
+                </button>
 
-                {/* Body */}
-                <div className="flex flex-1 flex-col p-6">
-                  <p className="mb-6 flex-1 text-sm leading-relaxed text-fg-muted">
-                    {uc.description}
-                  </p>
+                {/* Expanded content */}
+                <AnimatePresence>
+                  {openIndex === i && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{
+                        duration: 0.3,
+                        ease: [0.25, 0.4, 0, 1],
+                      }}
+                      className="overflow-hidden"
+                    >
+                      <div className="grid gap-8 pb-8 lg:grid-cols-[1fr_auto] lg:pl-13">
+                        <div>
+                          {/* Mobile tag + time */}
+                          <div className="mb-4 flex items-center gap-3 sm:hidden">
+                            <span className="rounded-full border border-accent/20 px-3 py-0.5 font-mono text-xs text-accent">
+                              {uc.tag}
+                            </span>
+                            <span className="text-sm text-fg-dim">
+                              <span className="line-through">{uc.before}</span>{" "}
+                              &rarr;{" "}
+                              <span className="font-semibold text-accent">
+                                {uc.after}
+                              </span>
+                            </span>
+                          </div>
 
-                  {/* Flow visualization */}
-                  <div className="flex items-center gap-1 overflow-x-auto">
-                    {uc.flow.map((step, i) => (
-                      <div key={step} className="flex items-center gap-1">
-                        <span className="whitespace-nowrap rounded-md bg-bg px-2.5 py-1.5 font-mono text-[10px] text-fg-dim transition-colors group-hover:text-fg-muted">
-                          {step}
-                        </span>
-                        {i < uc.flow.length - 1 && (
-                          <svg className="h-3 w-3 shrink-0 text-fg-dim/50" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-                          </svg>
-                        )}
+                          <p className="mb-6 max-w-xl text-lg leading-relaxed text-fg-muted">
+                            {uc.description}
+                          </p>
+
+                          {/* Flow visualization */}
+                          <div className="flex flex-wrap items-center gap-3">
+                            {uc.flow.map((step, j) => (
+                              <div key={step} className="flex items-center gap-3">
+                                <motion.span
+                                  initial={{ opacity: 0, scale: 0.8 }}
+                                  animate={{ opacity: 1, scale: 1 }}
+                                  transition={{ delay: j * 0.06 }}
+                                  className="rounded-full border border-border px-4 py-2 font-mono text-xs text-fg-muted"
+                                >
+                                  {step}
+                                </motion.span>
+                                {j < uc.flow.length - 1 && (
+                                  <motion.span
+                                    initial={{ opacity: 0 }}
+                                    animate={{ opacity: 1 }}
+                                    transition={{ delay: j * 0.06 + 0.03 }}
+                                    className="text-fg-dim"
+                                  >
+                                    &rarr;
+                                  </motion.span>
+                                )}
+                              </div>
+                            ))}
+                          </div>
+                        </div>
                       </div>
-                    ))}
-                  </div>
-                </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </div>
-            </StaggerItem>
+            </Reveal>
           ))}
-        </StaggerContainer>
+        </div>
       </div>
     </section>
   );
