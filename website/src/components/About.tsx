@@ -25,7 +25,7 @@ export default function About() {
           </Reveal>
           <Reveal delay={0.15}>
             <p className="mb-4 text-xl text-fg-muted lg:text-2xl">
-              21, Stuttgart — ehemaliger IBM Research Praktikant.
+              20, Stuttgart — ehemaliger IBM Research Praktikant.
             </p>
           </Reveal>
           <Reveal delay={0.2}>
