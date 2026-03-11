@@ -1,11 +1,11 @@
 # Tasks — AK Automation
 
-## Heute (2026-03-11)
+## Heute (2026-03-12)
 
 ### Prio 1: SEO + Discoverability
-- [ ] Google Search Console einrichten + Sitemap submitten
-- [ ] Schema Markup implementieren (Article, FAQ, Organization)
-- [ ] Internal Linking zwischen 7 Blog Posts aufbauen
+- [x] Google Search Console einrichten + Sitemap submitten (11 Seiten indexed)
+- [x] Schema Markup implementieren (ProfessionalService, FAQPage, Article+wordCount, BreadcrumbList, contactPoint)
+- [x] Internal Linking zwischen 7 Blog Posts (alle Posts verlinken untereinander + Weiterführend-Sections)
 
 ### Prio 2: LinkedIn + Outreach
 - [ ] LinkedIn Profil optimieren (Headline, About, Featured)
@@ -58,4 +58,4 @@
 - Blog: MDX Tables scroll-wrapper, blog page CTA direkt zu Calendly
 - AI Stack Overhaul committed (Rules, Agents, Skills, CLAUDE.md)
 - Deployed auf kahirov.de, mobile + desktop verifiziert mit Playwright
-- **Offen:** Google Search Console, Schema Markup, Internal Linking, LinkedIn, n8n Demos
+- **Offen:** Schema Markup, LinkedIn, n8n Demos
