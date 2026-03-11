@@ -1,10 +1,10 @@
 # AK Automation — AI-Prozess-Sprint
 
-Ein Repo, ein Business. AI-Prozessautomatisierung als Festpreis-Service fuer deutsche KMUs.
+Ein Repo, ein Business. AI-Prozessautomatisierung als Festpreis-Service für deutsche KMUs.
 
 ## Das Angebot
-- **Was:** AI-Prozess-Sprint — 1 Geschaeftsprozess automatisiert in 10 Arbeitstagen
-- **Fuer wen:** Operations-Leiter / GF deutscher KMUs (30-300 MA)
+- **Was:** AI-Prozess-Sprint — 1 Geschäftsprozess automatisiert in 10 Arbeitstagen
+- **Für wen:** Operations-Leiter / GF deutscher KMUs (30-300 MA)
 - **Preis:** 5.000 EUR netto Festpreis
 - **Branchen:** E-Commerce, Professional Services, Fertigung
 - **Ergebnis:** 20-30h/Woche Zeitersparnis pro automatisiertem Prozess
@@ -20,9 +20,10 @@ Ein Repo, ein Business. AI-Prozessautomatisierung als Festpreis-Service fuer deu
 - **Eval/Observability:** Supabase eval_runs + eval_error_classes Tabellen
 
 ## Aktuelle Phase
-Phase: Setup + MVP-Build
-Website laeuft lokal, 7 Blog-Posts (MDX), noch nicht deployed.
-Naechstes Ziel: Blog-Design Overhaul + Vercel Deployment + Demo #1
+Phase: V3 Operational — alle Schichten live
+Website deployed (Vercel), 7 Blog-Posts (MDX), Supabase live (3 Tabellen, 2 Edge Functions).
+CRM-Sync zu Jarvis aktiv (alle 5 Min). OpenClaw Gateway live auf VPS.
+Nächstes Ziel: Blog-Design Overhaul + Custom Domain + Demo #1 (n8n)
 
 ## Regeln
 @.claude/rules/code-style.md
@@ -30,17 +31,18 @@ Naechstes Ziel: Blog-Design Overhaul + Vercel Deployment + Demo #1
 @.claude/rules/routing.md
 @.claude/rules/verification.md
 @.claude/rules/security.md
+@.claude/rules/coordination.md
 
 ## Skills
 - /deploy — Website auf Vercel deployen
 - /new-lead — Lead in CRM anlegen
-- /weekly-review — KPI-Uebersicht
+- /weekly-review — KPI-Übersicht
 - /write-dm — Outreach-Nachricht schreiben
 - /research-firm — Tiefenrecherche zu einer Firma
 - /discovery-prep — Discovery-Call vorbereiten
-- /ops-status — Status aller Systeme pruefen
+- /ops-status — Status aller Systeme prüfen
 - /sync-memory — Fakten in Shared Memory speichern
-- /blog-publish — Blog-Post pruefen und publishen
+- /blog-publish — Blog-Post prüfen und publishen
 
 ## Referenz-Dateien
 - Pricing: @docs/pricing.md
@@ -50,7 +52,7 @@ Naechstes Ziel: Blog-Design Overhaul + Vercel Deployment + Demo #1
 - Pipeline: crm/pipeline.md
 - Learnings: docs/learnings.md
 - Entscheidungslog: ops/decisions.md
-- Stack & Zugaenge: ops/stack.md
+- Stack & Zugänge: ops/stack.md
 - Kosten: ops/costs.md
 - Metriken: ops/metrics.md
 - VPS-Deploy: ops/deploy-vps-gateway.sh

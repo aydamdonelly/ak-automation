@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Logo from "@/components/Logo";
 
 export const metadata: Metadata = {
-  title: "Impressum — AK Automation",
+  title: "Impressum — Adam Kahirov",
 };
 
 export default function Impressum() {
@@ -27,28 +27,16 @@ export default function Impressum() {
             <p>
               Adam Kahirov
               <br />
-              AK Automation
+              Gymnasiumstr. 52
               <br />
-              Stuttgart, Deutschland
+              70174 Stuttgart, Deutschland
             </p>
           </section>
 
           <section>
             <h2 className="mb-3 text-lg font-semibold text-fg">Kontakt</h2>
             <p>
-              E-Mail: adam@ak-automation.de
-              <br />
-              Telefon: Auf Anfrage
-            </p>
-          </section>
-
-          <section>
-            <h2 className="mb-3 text-lg font-semibold text-fg">
-              Umsatzsteuer-ID
-            </h2>
-            <p>
-              Umsatzsteuer-Identifikationsnummer gemäß § 27 a
-              Umsatzsteuergesetz: wird nachgereicht.
+              E-Mail: adam@kahirov.de
             </p>
           </section>
 
@@ -59,7 +47,9 @@ export default function Impressum() {
             <p>
               Adam Kahirov
               <br />
-              Stuttgart, Deutschland
+              Gymnasiumstr. 52
+              <br />
+              70174 Stuttgart, Deutschland
             </p>
           </section>
 

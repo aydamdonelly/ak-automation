@@ -12,23 +12,23 @@
 
 - **Context7**: Standard bei Library/SDK-Arbeit. Docs holen BEVOR Code geschrieben wird. Nicht bei trivialen/bekannten APIs
 - **Sequential Thinking**: Standard bei mehrstufigen Tasks, Trade-off-Entscheidungen, Migrations, Security, Architektur. Lieber einmal zu viel als einmal zu wenig
-- **Playwright**: UI-Verifikation (Screenshots nach visuellen Aenderungen), Scraping, Website-QA, Firmen-Research
-- **Supabase MCP**: IMMER existierendes Schema pruefen (execute_sql/list_tables) BEVOR Migrations geschrieben werden. Nie blind Tabellen anlegen
+- **Playwright**: UI-Verifikation (Screenshots nach visuellen Änderungen), Scraping, Website-QA, Firmen-Research
+- **Supabase MCP**: IMMER existierendes Schema prüfen (execute_sql/list_tables) BEVOR Migrations geschrieben werden. Nie blind Tabellen anlegen
 - **GitHub MCP**: PRs, Issues, Repo-Management
-- **Memory MCP**: Bestaetigte Fakten speichern/abrufen (nur: decision, lead_fact, learning, ops_status)
+- **Memory MCP**: Bestätigte Fakten speichern/abrufen (nur: decision, lead_fact, learning, ops_status)
 - **WebSearch**: Bei externen Tools, Services, ToS-Fragen, aktuellen Versionen — nicht raten, recherchieren
 
-## Fehler-Praevention
+## Fehler-Prävention
 
-- VOR jeder Migration: `mcp__supabase__execute_sql` → Schema pruefen
+- VOR jeder Migration: `mcp__supabase__execute_sql` → Schema prüfen
 - VOR jeder Library-Nutzung: Context7 → Docs holen (wenn nicht trivial)
 - VOR jeder riskanten Entscheidung: Sequential Thinking → durchdenken
-- NACH jedem Deploy: Health-Check / Smoke-Test ausfuehren
-- NIE Annahmen ueber DB-Schema, API-Versionen oder Config treffen — immer verifizieren
+- NACH jedem Deploy: Health-Check / Smoke-Test ausführen
+- NIE Annahmen über DB-Schema, API-Versionen oder Config treffen — immer verifizieren
 
 ## Agent-Routing
 
-**Claude Code** (ich) ist zustaendig fuer:
+**Claude Code** (ich) ist zuständig für:
 - Code schreiben, editieren, refactoren
 - Tests, Lint, Build, Diffs
 - Supabase Migrations + Edge Functions
@@ -36,7 +36,7 @@
 - Commits, Deploys (Vercel)
 - Reviews und Architektur
 
-**OpenClaw/Jarvis** ist zustaendig fuer:
+**OpenClaw/Jarvis** ist zuständig für:
 - Mobile/WhatsApp-Anfragen
 - Zeitgesteuerte Tasks (Cron, Heartbeat)
 - Research (Firmen, Leads, Markt)
@@ -44,9 +44,9 @@
 - DM/Email-Drafts
 - Tages-/Wochenbriefings
 
-**Regel:** Wenn Adam ueber Jarvis Code-Arbeit anfragt → Jarvis verweist an Claude Code.
+**Regel:** Wenn Adam über Jarvis Code-Arbeit anfragt → Jarvis verweist an Claude Code.
 
 ## Cost-Awareness
 - Opus nur wenn der Task es rechtfertigt (~$0.10/Call)
 - Sonnet als Workhorse (~$0.01/Call)
-- Haiku fuer alles unter 100 Tokens Output (~$0.001/Call)
+- Haiku für alles unter 100 Tokens Output (~$0.001/Call)

@@ -1,14 +1,14 @@
 ---
 name: weekly-review
-description: Woechentliche KPI-Uebersicht erstellen. Trigger bei Fragen nach Status, KPIs, Fortschritt.
+description: Wöchentliche KPI-Übersicht erstellen. Trigger bei Fragen nach Status, KPIs, Fortschritt.
 allowed-tools: Read, Grep, Glob
 ---
-Erstelle eine woechentliche Uebersicht:
+Erstelle eine wöchentliche Übersicht:
 
 1. Lies crm/leads.md und crm/pipeline.md
-2. Zaehle: Neue Leads, Kontaktierte, Calls gebucht, Angebote, Abschluesse
-3. Lies ops/decisions.md fuer offene Entscheidungen
-4. Lies docs/learnings.md fuer neue Erkenntnisse
+2. Zähle: Neue Leads, Kontaktierte, Calls gebucht, Angebote, Abschlüsse
+3. Lies ops/decisions.md für offene Entscheidungen
+4. Lies docs/learnings.md für neue Erkenntnisse
 5. Erstelle Report:
 
 ## Weekly Review [Datum]
@@ -17,10 +17,10 @@ Erstelle eine woechentliche Uebersicht:
 - Kontaktiert diese Woche:
 - Discovery Calls:
 - Angebote versendet:
-- Abschluesse:
+- Abschlüsse:
 - Revenue:
 
 ### Was lief gut
 ### Was lief nicht
-### Naechste Woche
+### Nächste Woche
 ### Offene Entscheidungen

@@ -1,15 +1,15 @@
 ---
 name: ops-status
-description: Status aller Systeme pruefen (Website, Supabase, OpenClaw, n8n). Trigger bei "Status?", "Laeuft alles?" oder aehnlich.
+description: Status aller Systeme prüfen (Website, Supabase, OpenClaw, n8n). Trigger bei "Status?", "Läuft alles?" oder ähnlich.
 allowed-tools: Read, Bash, Grep, Glob, mcp__supabase__*, mcp__playwright__*
 ---
-Ich pruefe den aktuellen Status aller Systeme und gebe einen kompakten Report.
+Ich prüfe den aktuellen Status aller Systeme und gebe einen kompakten Report.
 
-## Checks ausfuehren
+## Checks ausführen
 
 ### 1. Website (Next.js)
 - `cd website && bun run build 2>&1 | tail -5` — Build OK?
-- Pruefe ob Dev-Server laeuft: `lsof -i :3000 -i :3001 | head -5`
+- Prüfe ob Dev-Server läuft: `lsof -i :3000 -i :3001 | head -5`
 - Wenn deployed: Playwright-Screenshot von der Live-URL
 
 ### 2. Supabase
@@ -18,9 +18,9 @@ Ich pruefe den aktuellen Status aller Systeme und gebe einen kompakten Report.
 - `mcp__supabase__get_logs` — Errors in den letzten 24h?
 
 ### 3. OpenClaw/Jarvis
-- `pgrep -f "openclaw" | head -5` — Gateway laeuft?
+- `pgrep -f "openclaw" | head -5` — Gateway läuft?
 - Port 18789 aktiv? `lsof -i :18789 | head -3`
-- Letzter Heartbeat: Lies ~/.openclaw/workspace/memory/ fuer heutiges Log
+- Letzter Heartbeat: Lies ~/.openclaw/workspace/memory/ für heutiges Log
 
 ### 4. n8n (wenn deployed)
 - VPS erreichbar? SSH-Check
@@ -49,5 +49,5 @@ Ich pruefe den aktuellen Status aller Systeme und gebe einen kompakten Report.
 | Git | Clean/Dirty | [uncommitted files count] |
 | MCP Servers | X/Y active | [list] |
 
-### Aktionen noetig
-- [Liste aller Probleme die behoben werden muessen]
+### Aktionen nötig
+- [Liste aller Probleme die behoben werden müssen]

@@ -42,7 +42,7 @@ export default function Pricing() {
 
                 <div className="mt-10">
                   <MagneticButton
-                    href="#kontakt"
+                    href="https://calendly.com/kahirov/erstgespraech"
                     className="group relative inline-flex h-14 items-center justify-center overflow-hidden rounded-full bg-fg px-10 text-[15px] font-medium text-bg"
                   >
                     <span className="relative z-10">Jetzt Platz sichern</span>

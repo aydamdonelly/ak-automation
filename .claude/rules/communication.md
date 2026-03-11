@@ -1,6 +1,6 @@
 # Kommunikations-Stil
 
-## Profil (fuer Outreach/Content)
+## Profil (für Outreach/Content)
 - Adam Kahirov, 20, Stuttgart
 - IBM Research Alumnus (Dublin, Almaden, Tokyo)
 - Schwerpunkt: LLM-Systeme, Quantisierung, Retrieval, AI-Evaluation
@@ -9,8 +9,8 @@
 - Sprachen: Deutsch, Englisch, Russisch
 
 ## Kundenrelevante Texte
-- Deutsch, Sie-Form fuer Kunden
+- Deutsch, Sie-Form für Kunden
 - Direkt, respektvoll, konkret
 - Nie: "digitale Transformation", "Synergien", "AI-Revolution", "Game-Changer"
 - Immer: konkretes Problem + konkreter Nutzen + konkrete Zahl
-- Max 5 Saetze fuer DMs, max 8 fuer E-Mails
+- Max 5 Sätze für DMs, max 8 für E-Mails

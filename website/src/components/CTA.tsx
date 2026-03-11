@@ -4,8 +4,8 @@ import { Reveal, MagneticButton } from "./motion";
 
 export default function CTA() {
   return (
-    <section id="kontakt" className="relative py-40">
-      {/* Gradient mesh — intentionally bleeds upward beyond section */}
+    <section id="kontakt" className="relative py-24 lg:py-40">
+      {/* Gradient mesh — bleeds upward into FAQ for seamless transition */}
       <div className="pointer-events-none absolute -top-64 bottom-0 left-0 right-0">
         <div className="absolute bottom-0 left-1/4 h-200 w-250 rounded-full bg-accent/20 blur-[250px]" />
         <div className="absolute right-1/4 top-0 h-175 w-200 rounded-full bg-accent-pink/15 blur-[250px]" />
@@ -14,7 +14,7 @@ export default function CTA() {
       <div className="relative z-10 mx-auto max-w-350 px-6 lg:px-10">
         <div className="mx-auto max-w-4xl text-center">
           <Reveal>
-            <h2 className="mb-8 text-[clamp(2.5rem,6vw,5rem)] font-bold leading-[1] tracking-tight">
+            <h2 className="mb-8 text-[clamp(2rem,6vw,5rem)] font-bold leading-none tracking-tight">
               Bereit, 20+ Stunden{" "}
               <span className="gradient-text">zurückzugewinnen?</span>
             </h2>
@@ -28,7 +28,7 @@ export default function CTA() {
 
           <Reveal delay={0.2}>
             <MagneticButton
-              href="https://calendly.com"
+              href="https://calendly.com/kahirov/erstgespraech"
               className="group relative inline-flex h-16 items-center justify-center overflow-hidden rounded-full bg-fg px-14 text-base font-medium text-bg"
             >
               <span className="relative z-10">

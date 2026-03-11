@@ -79,7 +79,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.3, ease: [0.25, 0.4, 0, 1] }}
-            className="mb-8 max-w-5xl text-[clamp(3rem,7vw,6.5rem)] font-bold leading-[0.95] tracking-tight"
+            className="mb-8 max-w-5xl text-[clamp(2.25rem,7vw,6.5rem)] font-bold leading-[0.95] tracking-tight"
           >
             Ich automatisiere{" "}
             <span className="gradient-text">Ihren zeitfressendsten Prozess</span>{" "}
@@ -91,7 +91,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
-            className="mb-12 max-w-2xl text-xl leading-relaxed text-fg-muted"
+            className="mb-10 max-w-2xl text-base leading-relaxed text-fg-muted sm:mb-12 sm:text-xl"
           >
             KI-gestützte Prozessautomatisierung für deutsche KMUs.
             Festpreis. Messbares Ergebnis. Kein Risiko.
@@ -102,11 +102,11 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.65 }}
-            className="flex flex-col gap-4 sm:flex-row"
+            className="flex flex-col items-center gap-3 sm:flex-row sm:items-start sm:gap-4"
           >
             <MagneticButton
-              href="#kontakt"
-              className="group relative inline-flex h-14 items-center justify-center overflow-hidden rounded-full bg-fg px-10 text-[15px] font-medium text-bg"
+              href="https://calendly.com/kahirov/erstgespraech"
+              className="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-full bg-fg px-8 text-sm font-medium text-bg sm:h-14 sm:px-10 sm:text-[15px]"
             >
               <span className="relative z-10">Kostenloses Erstgespräch</span>
               <span className="absolute inset-0 bg-linear-to-r from-accent to-accent-pink opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
@@ -116,7 +116,7 @@ export default function Hero() {
             </MagneticButton>
             <a
               href="#loesung"
-              className="inline-flex h-14 items-center justify-center rounded-full border border-border px-10 text-[15px] font-medium text-fg-muted transition-all hover:border-fg-dim hover:text-fg"
+              className="inline-flex h-12 items-center justify-center rounded-full border border-border px-8 text-sm font-medium text-fg-muted transition-all hover:border-fg-dim hover:text-fg sm:h-14 sm:px-10 sm:text-[15px]"
             >
               So funktioniert&apos;s
               <svg className="ml-2 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>

@@ -1,4 +1,3 @@
-Using workdir /Users/adamkahirov/Desktop/code/ak-automation
 export type Json =
   | string
   | number

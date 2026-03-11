@@ -1,25 +1,25 @@
 # Verification Rules
 
-## Code-Aenderungen
+## Code-Änderungen
 - `npx tsc --noEmit` nach jedem TS/TSX-Edit (Hook macht das automatisch)
 - `bun run build` vor jedem Commit — Build muss passen
 - `bun run lint` nach Edits (Hook macht das automatisch)
 - Diff reviewen vor Commit
 
-## UI-Aenderungen
-- Playwright-Screenshot nach visuellen Aenderungen
+## UI-Änderungen
+- Playwright-Screenshot nach visuellen Änderungen
 - Vergleich gegen Intent/Design-Vorgabe
-- Responsive pruefen (mobile + desktop)
+- Responsive prüfen (mobile + desktop)
 
 ## Blog/Content (MDX)
-- Build pruefen: MDX darf keinen Render-Error werfen
+- Build prüfen: MDX darf keinen Render-Error werfen
 - Frontmatter validieren: YAML-Syntax korrekt (gray-matter)
-- Interne Links pruefen: keine 404s
+- Interne Links prüfen: keine 404s
 
-## Datenbank-Aenderungen
-- `mcp__supabase__get_advisors` VOR jeder Migration ausfuehren
-- SQL reviewen: keine destructive operations ohne Bestaetigung
-- Type-Generierung nach Schema-Aenderung
+## Datenbank-Änderungen
+- `mcp__supabase__get_advisors` VOR jeder Migration ausführen
+- SQL reviewen: keine destructive operations ohne Bestätigung
+- Type-Generierung nach Schema-Änderung
 
 ## Pre-Commit Checkliste
 1. TypeScript: keine Errors
@@ -30,4 +30,4 @@
 ## Post-Deploy Checkliste
 1. Live URL antwortet (200)
 2. Kritische Seiten laden (/, /blog, /impressum)
-3. Screenshot-Vergleich bei UI-Aenderungen
+3. Screenshot-Vergleich bei UI-Änderungen

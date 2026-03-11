@@ -48,7 +48,7 @@ export default function Header() {
             </a>
           ))}
           <a
-            href="#kontakt"
+            href="https://calendly.com/kahirov/erstgespraech"
             className="relative overflow-hidden rounded-full bg-fg px-7 py-3 text-base font-medium text-bg transition-transform hover:scale-105"
           >
             Gespräch buchen
@@ -98,7 +98,7 @@ export default function Header() {
                 </motion.a>
               ))}
               <a
-                href="#kontakt"
+                href="https://calendly.com/kahirov/erstgespraech"
                 onClick={() => setMenuOpen(false)}
                 className="mt-2 rounded-full bg-fg px-6 py-3 text-center text-[15px] font-medium text-bg"
               >

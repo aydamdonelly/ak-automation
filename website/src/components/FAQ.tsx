@@ -39,7 +39,7 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section className="py-32">
+    <section className="py-20 lg:py-32">
       <div className="mx-auto max-w-350 px-6 lg:px-10">
         <div className="grid gap-16 lg:grid-cols-[1fr_2fr]">
           {/* Left: heading — sticky */}

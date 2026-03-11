@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Logo from "@/components/Logo";
 
 export const metadata: Metadata = {
-  title: "Datenschutzerklärung — AK Automation",
+  title: "Datenschutzerklärung — Adam Kahirov",
 };
 
 export default function Datenschutz() {
@@ -44,11 +44,11 @@ export default function Datenschutz() {
             <p>
               Adam Kahirov
               <br />
-              AK Automation
+              Gymnasiumstr. 52
               <br />
-              Stuttgart, Deutschland
+              70174 Stuttgart, Deutschland
               <br />
-              E-Mail: adam@ak-automation.de
+              E-Mail: adam@kahirov.de
             </p>
             <p className="mt-3">
               Verantwortliche Stelle ist die natürliche oder juristische Person,

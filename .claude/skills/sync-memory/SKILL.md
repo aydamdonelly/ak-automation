@@ -1,17 +1,17 @@
 ---
 name: sync-memory
-description: Bestaetigte Fakten in Shared Memory (Knowledge Graph) speichern. Trigger bei "merk dir", "speicher das", "sync memory".
+description: Bestätigte Fakten in Shared Memory (Knowledge Graph) speichern. Trigger bei "merk dir", "speicher das", "sync memory".
 allowed-tools: Read, Edit, mcp__memory__*
 ---
-Ich synchronisiere bestaetigte Fakten in den Shared Memory Knowledge Graph.
+Ich synchronisiere bestätigte Fakten in den Shared Memory Knowledge Graph.
 
-## Was in Shared Memory gehoert (NUR diese 4 Kategorien)
+## Was in Shared Memory gehört (NUR diese 4 Kategorien)
 
 ### 1. Entscheidungen
-Beispiele: Pricing geaendert, CTA geaendert, ICP geschaerft, Outreach-Regel geaendert
+Beispiele: Pricing geändert, CTA geändert, ICP geschärft, Outreach-Regel geändert
 Format: decision:[thema] — [was wurde entschieden] — [datum]
 
-### 2. Bestaetigte Lead-/Kundenfakten
+### 2. Bestätigte Lead-/Kundenfakten
 Beispiele: Ansprechpartner, Schmerzpunkt, Toolstack, Status, Follow-up-Datum
 Format: lead:[firmenname] — [fakt] — [datum]
 
@@ -23,9 +23,9 @@ Format: learning:[thema] — [erkenntnis] — [quelle]
 Beispiele: Deploy fehlgeschlagen, Vercel-Warnung, n8n-Workflow broken, Migration pending
 Format: ops:[system] — [status] — [datum]
 
-## Was NICHT in Shared Memory gehoert
+## Was NICHT in Shared Memory gehört
 - Keine kompletten Chats
-- Keine Rohgedanken oder Entwuerfe
+- Keine Rohgedanken oder Entwürfe
 - Keine langen Recherchedumps
 - Keine Duplikation von CLAUDE.md, MEMORY.md oder CRM-Dateien
 
@@ -36,9 +36,9 @@ Format: ops:[system] — [status] — [datum]
    - Name: [kategorie]:[thema]
    - Type: decision | lead_fact | learning | ops_status
    - Observations: [die konkreten Fakten]
-4. Ich verknuepfe mit bestehenden Entities (Relations) wenn sinnvoll
-5. Ich bestaetige dem User was gespeichert wurde
+4. Ich verknüpfe mit bestehenden Entities (Relations) wenn sinnvoll
+5. Ich bestätige dem User was gespeichert wurde
 
 ## Lesen aus Shared Memory
 - Bei Bedarf: `mcp__memory__search_nodes` um bestehende Fakten abzurufen
-- Vor dem Schreiben: pruefen ob Entity schon existiert (update statt duplicate)
+- Vor dem Schreiben: prüfen ob Entity schon existiert (update statt duplicate)

@@ -8,7 +8,7 @@ paths:
 - TypeScript strict, keine any
 - Conventional Commits (englisch)
 - Code-Kommentare: Englisch
-- Claude API nur ueber Supabase Edge Functions (nie direkt vom Client)
+- Claude API nur über Supabase Edge Functions (nie direkt vom Client)
 - Alle API-Keys in .env (nie committen)
 - Max 3 externe Dependencies pro Workflow
 - Vor Commit: `bun run build` muss passen, `bun run lint` muss clean sein

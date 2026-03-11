@@ -162,7 +162,7 @@ export default function Solution() {
                   </span>
                 </div>
                 {/* Terminal body */}
-                <div className="p-5 font-mono text-sm leading-relaxed">
+                <div className="overflow-x-auto p-5 font-mono text-sm leading-relaxed">
                   {step.terminal.map((line, j) => (
                     <motion.div
                       key={`${step.id}-${j}`}
