@@ -14,7 +14,7 @@ export default function Footer() {
           <a href="/blog" className="transition-colors hover:text-fg">
             Blog
           </a>
-          <a href="https://linkedin.com/in/adamkahirov" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-fg">
+          <a href="https://linkedin.com/in/adam-kahirov" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-fg">
             LinkedIn
           </a>
           <a href="/impressum" className="transition-colors hover:text-fg">

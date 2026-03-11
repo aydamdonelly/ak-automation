@@ -49,13 +49,26 @@
 - Tagesablauf: Jarvis Briefing 9:00 → Tasks abarbeiten → Session-Log abends
 - Adam updated tasks.md, Jarvis und Claude Code lesen es
 
+## Erledigt (2026-03-12)
+- [x] Schema Markup: FAQPage (Landing), Article+wordCount, BreadcrumbList, Organization+contactPoint
+- [x] GSC eingerichtet, 11 Seiten indexiert, Sitemap submitted
+- [x] Internal Linking zwischen allen 7 Blog Posts
+- [x] SEO-Strategie definiert: ops/seo-targets.md + ops/funnel.md
+- [x] Playbook Kerninfos in Memory gespeichert
+- [x] OpenClaw/Jarvis Overhaul: MEMORY.md, SOUL.md, HEARTBEAT.md, TOOLS.md aktualisiert
+- [x] Gateway Watchdog + Auto-Restart auf VPS (crontab alle 5 Min)
+- [x] CRM-Sync verifiziert + manuell getriggert
+
 ## Letzte Session
-- **Datum:** 2026-03-12 (Nacht)
-- Mobile Responsive komplett optimiert: Hero (clamp, button sizing, centered), CTA, FAQ spacing, Solution terminal scroll
-- Horizontal scroll gefixt: `overflow-x: hidden` auf `html` + `body` (body allein reicht nicht)
-- CTA Gradient Mesh: overflow-hidden entfernt — Blobs bluten absichtlich mit -top-64 in FAQ, body overflow-x reicht
-- Alle Booking-CTAs jetzt direkt zu Calendly (kein Umweg über #kontakt)
-- Blog: MDX Tables scroll-wrapper, blog page CTA direkt zu Calendly
-- AI Stack Overhaul committed (Rules, Agents, Skills, CLAUDE.md)
-- Deployed auf kahirov.de, mobile + desktop verifiziert mit Playwright
-- **Offen:** Schema Markup, LinkedIn, n8n Demos
+- **Datum:** 2026-03-12
+- Schema Markup implementiert (FAQPage, Article, BreadcrumbList, Organization)
+- SEO-Strategie: Funnel (4 Tiers) + SEO Targets (Quartals-Ziele) definiert
+- Playbook-Kerninfos persistent gespeichert (memory/playbook.md)
+- OpenClaw/Jarvis komplett überarbeitet: alle VPS-Workspace-Dateien aktualisiert
+  - MEMORY.md: Fakten korrigiert, Funnel + Constraints + Go/Kill hinzugefügt
+  - SOUL.md: Behavior Rules (keine Emojis, kurze Antworten, nie "soll ich" fragen)
+  - HEARTBEAT.md: Morning Briefing Format (tasks.md zuerst lesen, Gestern/Offen/Heute)
+  - TOOLS.md: Aktuelle Services, CRM-Sync Details
+- Gateway Watchdog eingerichtet (VPS crontab, auto-restart bei Crash)
+- CRM-Sync funktioniert (Mac crontab alle 5 Min → VPS)
+- **Offen:** LinkedIn Profil, Outreach-Strategie, n8n Demos

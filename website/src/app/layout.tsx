@@ -58,7 +58,7 @@ const organizationSchema = {
   founder: {
     "@type": "Person",
     name: "Adam Kahirov",
-    url: "https://linkedin.com/in/adamkahirov",
+    url: "https://linkedin.com/in/adam-kahirov",
     jobTitle: "AI-Automatisierungsberater",
   },
   address: {
@@ -80,7 +80,7 @@ const organizationSchema = {
     availableLanguage: ["German", "English"],
   },
   sameAs: [
-    "https://linkedin.com/in/adamkahirov",
+    "https://linkedin.com/in/adam-kahirov",
     "https://github.com/ataladams",
   ],
   knowsAbout: [

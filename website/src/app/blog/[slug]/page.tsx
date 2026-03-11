@@ -154,7 +154,7 @@ export default async function BlogPost({ params }: Props) {
     author: {
       "@type": "Person",
       name: "Adam Kahirov",
-      url: "https://linkedin.com/in/adamkahirov",
+      url: "https://linkedin.com/in/adam-kahirov",
       jobTitle: "AI-Automatisierungsberater",
     },
     publisher: {
