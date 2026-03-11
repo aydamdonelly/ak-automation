@@ -82,8 +82,8 @@ export default function Hero() {
             className="mb-8 max-w-5xl text-[clamp(2.25rem,7vw,6.5rem)] font-bold leading-[0.95] tracking-tight"
           >
             Ich automatisiere{" "}
-            <span className="gradient-text">Ihren zeitfressendsten Prozess</span>{" "}
-            — in 2 Wochen.
+            <span className="gradient-text">Ihren zeitfressendsten Prozess</span>
+            . In 2 Wochen.
           </motion.h1>
 
           {/* Subtitle */}

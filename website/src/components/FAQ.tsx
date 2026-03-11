@@ -11,7 +11,7 @@ const faqs = [
   },
   {
     q: "Funktioniert das auch in meiner Branche?",
-    a: "Wenn Ihr Team wiederkehrende, regelbasierte Aufgaben hat — ja. E-Commerce, Professional Services, Fertigung und viele weitere Branchen profitieren. Im kostenlosen Erstgespräch prüfe ich Ihren konkreten Fall.",
+    a: "Wenn Ihr Team wiederkehrende, regelbasierte Aufgaben hat, ja. E-Commerce, Professional Services, Fertigung und viele weitere Branchen profitieren. Im kostenlosen Erstgespräch prüfe ich Ihren konkreten Fall.",
   },
   {
     q: "Was passiert, wenn der Sprint nicht das versprochene Ergebnis liefert?",
@@ -19,7 +19,7 @@ const faqs = [
   },
   {
     q: "Brauche ich technisches Wissen in meinem Team?",
-    a: "Nein. Ich baue alles auf, schule Ihr Team und übergebe eine verständliche Dokumentation. Ihre Mitarbeiter nutzen das System — sie müssen es nicht verstehen.",
+    a: "Nein. Ich baue alles auf, schule Ihr Team und übergebe eine verständliche Dokumentation. Ihre Mitarbeiter nutzen das System, sie müssen es nicht verstehen.",
   },
   {
     q: "Warum 10 Tage und nicht 3 Monate?",
@@ -27,7 +27,7 @@ const faqs = [
   },
   {
     q: "Was passiert nach dem Sprint?",
-    a: "Das System läuft eigenständig. Sie bekommen 30 Tage Support, Dokumentation und eine Schulung. Danach brauchen Sie mich nicht mehr — es sei denn, Sie wollen den nächsten Prozess automatisieren.",
+    a: "Das System läuft eigenständig. Sie bekommen 30 Tage Support, Dokumentation und eine Schulung. Danach brauchen Sie mich nicht mehr, es sei denn, Sie wollen den nächsten Prozess automatisieren.",
   },
   {
     q: "Wie unterscheidet sich das von einem klassischen Berater?",

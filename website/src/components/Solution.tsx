@@ -49,7 +49,7 @@ const steps = [
     title: "Launch",
     duration: "Tag 9–10",
     description:
-      "Go-Live mit Ihrem Team. Schulung, Dokumentation und Übergabe. Danach läuft der Prozess — ohne mich.",
+      "Go-Live mit Ihrem Team. Schulung, Dokumentation und Übergabe. Danach läuft der Prozess ohne mich.",
     deliverable: "Übergabe + Dokumentation",
     terminal: [
       { type: "cmd", text: "$ ak-automation deploy --production" },
@@ -58,7 +58,7 @@ const steps = [
       { type: "out", text: "├── Monitoring: konfiguriert" },
       { type: "out", text: "├── Schulung: abgeschlossen" },
       { type: "out", text: "└── Dokumentation: übergeben" },
-      { type: "ok", text: "✓ System live — 30h/Woche automatisiert" },
+      { type: "ok", text: "✓ System live, 30h/Woche automatisiert" },
       { type: "ok", text: "✓ 30 Tage Support aktiv" },
     ],
   },

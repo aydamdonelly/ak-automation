@@ -27,7 +27,7 @@ const faqSchema = {
       name: "Funktioniert das auch in meiner Branche?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Wenn Ihr Team wiederkehrende, regelbasierte Aufgaben hat — ja. E-Commerce, Professional Services, Fertigung und viele weitere Branchen profitieren. Im kostenlosen Erstgespräch prüfe ich Ihren konkreten Fall.",
+        text: "Wenn Ihr Team wiederkehrende, regelbasierte Aufgaben hat, ja. E-Commerce, Professional Services, Fertigung und viele weitere Branchen profitieren. Im kostenlosen Erstgespräch prüfe ich Ihren konkreten Fall.",
       },
     },
     {
@@ -43,7 +43,7 @@ const faqSchema = {
       name: "Brauche ich technisches Wissen in meinem Team?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Nein. Ich baue alles auf, schule Ihr Team und übergebe eine verständliche Dokumentation. Ihre Mitarbeiter nutzen das System — sie müssen es nicht verstehen.",
+        text: "Nein. Ich baue alles auf, schule Ihr Team und übergebe eine verständliche Dokumentation. Ihre Mitarbeiter nutzen das System, sie müssen es nicht verstehen.",
       },
     },
     {
@@ -59,7 +59,7 @@ const faqSchema = {
       name: "Was passiert nach dem Sprint?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Das System läuft eigenständig. Sie bekommen 30 Tage Support, Dokumentation und eine Schulung. Danach brauchen Sie mich nicht mehr — es sei denn, Sie wollen den nächsten Prozess automatisieren.",
+        text: "Das System läuft eigenständig. Sie bekommen 30 Tage Support, Dokumentation und eine Schulung. Danach brauchen Sie mich nicht mehr, es sei denn, Sie wollen den nächsten Prozess automatisieren.",
       },
     },
     {

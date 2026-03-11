@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Logo from "@/components/Logo";
 
 export const metadata: Metadata = {
-  title: "Impressum — Adam Kahirov",
+  title: "Impressum | Adam Kahirov",
 };
 
 export default function Impressum() {

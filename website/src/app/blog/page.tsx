@@ -11,7 +11,7 @@ import {
 import { getAllPosts, formatDate } from "@/lib/blog";
 
 export const metadata: Metadata = {
-  title: "Blog — AK Automation",
+  title: "Blog | AK Automation",
   description:
     "Praxiswissen zu AI-Automatisierung, Prozessoptimierung und KI-Einsatz in deutschen KMUs.",
 };
@@ -45,7 +45,7 @@ export default function BlogIndex() {
             <Reveal delay={0.2}>
               <p className="mt-5 max-w-2xl text-lg leading-relaxed text-fg-muted lg:text-xl">
                 Konkrete Einblicke, keine Buzzwords. Wie deutsche KMUs AI
-                tatsächlich einsetzen — mit echten Zahlen und Anleitungen.
+                tatsächlich einsetzen, mit echten Zahlen und Anleitungen.
               </p>
             </Reveal>
           </div>
@@ -214,7 +214,7 @@ export default function BlogIndex() {
                     Bereit für AI-Automatisierung?
                   </h2>
                   <p className="mx-auto mt-5 max-w-xl text-lg leading-relaxed text-fg-muted">
-                    Kostenloser 30-Min Check — kein Verkaufsgespräch, nur
+                    Kostenloser 30-Min Check. Kein Verkaufsgespräch, nur
                     eine ehrliche Einschätzung ob und wo AI in Ihrem
                     Unternehmen Stunden spart.
                   </p>

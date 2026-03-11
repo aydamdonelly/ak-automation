@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Logo from "@/components/Logo";
 
 export const metadata: Metadata = {
-  title: "Datenschutzerklärung — Adam Kahirov",
+  title: "Datenschutzerklärung | Adam Kahirov",
 };
 
 export default function Datenschutz() {

@@ -9,7 +9,7 @@ const problems = [
     highlight: "pro Woche",
     title: "Manuelle Routinearbeit",
     description:
-      "Copy-Paste, Datenabgleich, wiederkehrende E-Mails — Ihre Mitarbeiter verbringen Stunden mit Arbeit, die eine Maschine in Sekunden erledigt.",
+      "Copy-Paste, Datenabgleich, wiederkehrende E-Mails. Ihre Mitarbeiter verbringen Stunden mit Arbeit, die eine Maschine in Sekunden erledigt.",
   },
   {
     number: 5,
@@ -17,7 +17,7 @@ const problems = [
     highlight: "Systeme",
     title: "Daten-Silos ohne Brücke",
     description:
-      "CRM, E-Mail, Excel, ERP — Ihre Daten leben in Silos, die nicht miteinander sprechen. Jeder Transfer ist ein Fehlerrisiko.",
+      "CRM, E-Mail, Excel, ERP: Ihre Daten leben in Silos, die nicht miteinander sprechen. Jeder Transfer ist ein Fehlerrisiko.",
   },
   {
     number: 0,
@@ -25,7 +25,7 @@ const problems = [
     highlight: "Umsetzung",
     title: "AI-Hype, null Ergebnis",
     description:
-      "Sie wissen, dass AI helfen könnte. Aber Ihr Team hat weder die Zeit noch das Know-how — und Berater liefern PowerPoints, keine Lösungen.",
+      "Sie wissen, dass AI helfen könnte. Aber Ihr Team hat weder die Zeit noch das Know-how, und Berater liefern PowerPoints, keine Lösungen.",
   },
 ];
 
@@ -39,7 +39,7 @@ export default function Problem() {
         </Reveal>
         <Reveal delay={0.1}>
           <h2 className="mb-6 max-w-4xl text-[clamp(2rem,5vw,4rem)] font-bold leading-[1.1] tracking-tight">
-            Ihr Team arbeitet hart —<br />
+            Ihr Team arbeitet hart,<br />
             aber an den{" "}
             <span className="text-fg-muted">falschen Aufgaben.</span>
           </h2>

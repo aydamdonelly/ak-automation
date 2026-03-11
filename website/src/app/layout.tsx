@@ -15,12 +15,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "AK Automation — AI-Prozessautomatisierung für KMUs",
+  title: "AK Automation | AI-Prozessautomatisierung für KMUs",
   description:
     "Ich automatisiere Ihren zeitfressendsten Geschäftsprozess in 2 Wochen. Festpreis. Messbares Ergebnis.",
   metadataBase: new URL("https://kahirov.de"),
   openGraph: {
-    title: "AK Automation — AI-Prozessautomatisierung für KMUs",
+    title: "AK Automation | AI-Prozessautomatisierung für KMUs",
     description:
       "Ich automatisiere Ihren zeitfressendsten Geschäftsprozess in 2 Wochen. Festpreis. Messbares Ergebnis.",
     url: "https://kahirov.de",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "AK Automation — AI-Prozessautomatisierung für KMUs",
+    title: "AK Automation | AI-Prozessautomatisierung für KMUs",
     description:
       "Ich automatisiere Ihren zeitfressendsten Geschäftsprozess in 2 Wochen. Festpreis. Messbares Ergebnis.",
   },

@@ -37,7 +37,7 @@ export default function Pricing() {
                 <p className="mt-6 text-sm text-fg-muted">
                   <span className="text-accent">&#10003;</span>{" "}
                   <span className="font-medium text-fg">Sprint-Garantie</span>{" "}
-                  — Ergebnis nicht erreicht? Ich arbeite kostenlos weiter.
+                  Ergebnis nicht erreicht? Ich arbeite kostenlos weiter.
                 </p>
 
                 <div className="mt-10">

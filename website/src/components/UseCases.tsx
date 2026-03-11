@@ -54,7 +54,7 @@ export default function UseCases() {
         </Reveal>
         <Reveal delay={0.2}>
           <p className="mb-20 max-w-2xl text-lg text-fg-muted">
-            Drei typische Beispiele. Ihr Prozess kann anders aussehen — im
+            Drei typische Beispiele. Ihr Prozess kann anders aussehen, im
             Erstgespräch finden wir den richtigen.
           </p>
         </Reveal>

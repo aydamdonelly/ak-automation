@@ -110,7 +110,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const url = `https://kahirov.de/blog/${slug}`;
 
   return {
-    title: `${post.title} — AK Automation Blog`,
+    title: `${post.title} | AK Automation Blog`,
     description: post.description,
     openGraph: {
       title: post.title,
@@ -324,7 +324,7 @@ export default async function BlogPost({ params }: Props) {
                     </h3>
                     <p className="mt-3 max-w-lg text-[#b0b0b0]">
                       Kostenloser 30-Min AI-Readiness-Check. Kein
-                      Verkaufsgespräch — nur eine ehrliche Einschätzung.
+                      Verkaufsgespräch, nur eine ehrliche Einschätzung.
                     </p>
                   </div>
                   <a
