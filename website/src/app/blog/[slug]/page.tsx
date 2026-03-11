@@ -141,6 +141,8 @@ export default async function BlogPost({ params }: Props) {
     .filter((p) => p.tags.some((t) => post.tags.includes(t)))
     .slice(0, 3);
 
+  const wordCount = post.content.split(/\s+/).length;
+
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -148,10 +150,12 @@ export default async function BlogPost({ params }: Props) {
     description: post.description,
     datePublished: post.date,
     dateModified: post.date,
+    wordCount,
     author: {
       "@type": "Person",
       name: "Adam Kahirov",
-      url: "https://linkedin.com/in/adam-kahirov",
+      url: "https://linkedin.com/in/adamkahirov",
+      jobTitle: "AI-Automatisierungsberater",
     },
     publisher: {
       "@type": "Organization",
@@ -162,6 +166,31 @@ export default async function BlogPost({ params }: Props) {
     mainEntityOfPage: `https://kahirov.de/blog/${slug}`,
     inLanguage: "de",
     keywords: post.tags.join(", "),
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Startseite",
+        item: "https://kahirov.de",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Blog",
+        item: "https://kahirov.de/blog",
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: post.title,
+        item: `https://kahirov.de/blog/${slug}`,
+      },
+    ],
   };
 
   const faqSchema =
@@ -185,6 +214,10 @@ export default async function BlogPost({ params }: Props) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       {faqSchema && (
         <script
