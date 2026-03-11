@@ -20,10 +20,10 @@ Ein Repo, ein Business. AI-Prozessautomatisierung als Festpreis-Service für deu
 - **Eval/Observability:** Supabase eval_runs + eval_error_classes Tabellen
 
 ## Aktuelle Phase
-Phase: V3 Operational — alle Schichten live
-Website deployed (Vercel), 7 Blog-Posts (MDX), Supabase live (3 Tabellen, 2 Edge Functions).
+Phase: OUTREACH-READY — Website live (kahirov.de), mobile-optimiert, SEO komplett
+Website deployed (Vercel), 7 Blog-Posts (MDX), Schema Markup, Supabase live.
 CRM-Sync zu Jarvis aktiv (alle 5 Min). OpenClaw Gateway live auf VPS.
-Nächstes Ziel: Blog-Design Overhaul + Custom Domain + Demo #1 (n8n)
+Nächstes Ziel: LinkedIn Outreach starten + n8n Demo-Workflows
 
 ## Regeln
 @.claude/rules/code-style.md
@@ -45,14 +45,23 @@ Nächstes Ziel: Blog-Design Overhaul + Custom Domain + Demo #1 (n8n)
 - /blog-publish — Blog-Post prüfen und publishen
 
 ## Referenz-Dateien
+
+### Strategie (bei Business-Entscheidungen lesen)
+- Acquisition Funnel: @ops/funnel.md
+- SEO-Targets: @ops/seo-targets.md
+- SEO-Blog-Strategie: @docs/seo-blog-strategy.md
 - Pricing: @docs/pricing.md
-- SEO-Strategie: @docs/seo-blog-strategy.md
+
+### Operations
+- Tasks (aktuelle Prios): @ops/tasks.md
+- Entscheidungslog: @ops/decisions.md
+- Learnings: @docs/learnings.md
+- Stack & Zugänge: @ops/stack.md
+- Kosten: @ops/costs.md
+- Metriken: @ops/metrics.md
+- VPS-Deploy: @ops/deploy-vps-gateway.sh
+
+### CRM & Sales
+- Leads: @crm/leads.md
+- Pipeline: @crm/pipeline.md
 - Templates: templates/
-- Leads: crm/leads.md
-- Pipeline: crm/pipeline.md
-- Learnings: docs/learnings.md
-- Entscheidungslog: ops/decisions.md
-- Stack & Zugänge: ops/stack.md
-- Kosten: ops/costs.md
-- Metriken: ops/metrics.md
-- VPS-Deploy: ops/deploy-vps-gateway.sh
