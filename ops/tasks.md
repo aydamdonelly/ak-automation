@@ -19,6 +19,12 @@
 - [ ] ANTHROPIC_API_KEY als Supabase Secret setzen (für Demos)
 
 ## Erledigt
+- [x] Mobile Responsive Optimierung (Hero, CTA, FAQ, Pricing, Solution, Blog)
+- [x] Horizontal Scroll Fix (overflow-x hidden auf html + body)
+- [x] Direct Calendly Links überall (Header, Hero, Pricing, Blog CTAs)
+- [x] CTA Gradient Mesh fix (kein overflow-hidden, bleed in FAQ erhalten)
+- [x] Blog Table Scroll Wrapper (MDX tables auf mobile scrollbar)
+- [x] AI Stack Overhaul (Rules, Agents, Skills, CLAUDE.md rewrite)
 - [x] V3 Stack operational (alle 6 Schichten live)
 - [x] CRM-Sync zu Jarvis (alle 5 Min)
 - [x] Edge Functions deployed (claude-proxy, eval-log)
@@ -44,14 +50,12 @@
 - Adam updated tasks.md, Jarvis und Claude Code lesen es
 
 ## Letzte Session
-- **Datum:** 2026-03-12
-- Blog Design v2 komplett überarbeitet (editorial layout, Reveal/Stagger Animationen, ScrollProgress, keine Cards)
-- BlogHeader.tsx neu erstellt (Navigation: Startseite, Preis, Blog, Gespräch buchen)
-- MDX CTA-Links rendern jetzt als Buttons (nicht mehr als bare Hyperlinks)
-- remark-gfm hinzugefügt (Tabellen rendern korrekt)
-- Domain kahirov.de gekauft (IONOS, €12/yr) + DNS konfiguriert + Vercel connected
-- Email adam@kahirov.de eingerichtet
-- Calendly Account erstellt + in Website CTA eingebunden
-- Favicon mit AK Logo generiert und deployed (SVG + PNG alle Sizes)
-- Impressum + Datenschutz auf Privatperson angepasst (kein Gewerbe, kein USt-IdNr)
-- **Offen:** SEO Deep Research, LinkedIn Optimierung, Outreach-Strategie, n8n Demos
+- **Datum:** 2026-03-12 (Nacht)
+- Mobile Responsive komplett optimiert: Hero (clamp, button sizing, centered), CTA, FAQ spacing, Solution terminal scroll
+- Horizontal scroll gefixt: `overflow-x: hidden` auf `html` + `body` (body allein reicht nicht)
+- CTA Gradient Mesh: overflow-hidden entfernt — Blobs bluten absichtlich mit -top-64 in FAQ, body overflow-x reicht
+- Alle Booking-CTAs jetzt direkt zu Calendly (kein Umweg über #kontakt)
+- Blog: MDX Tables scroll-wrapper, blog page CTA direkt zu Calendly
+- AI Stack Overhaul committed (Rules, Agents, Skills, CLAUDE.md)
+- Deployed auf kahirov.de, mobile + desktop verifiziert mit Playwright
+- **Offen:** Google Search Console, Schema Markup, Internal Linking, LinkedIn, n8n Demos
