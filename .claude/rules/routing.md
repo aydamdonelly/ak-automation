@@ -26,25 +26,53 @@
 - NACH jedem Deploy: Health-Check / Smoke-Test ausführen
 - NIE Annahmen über DB-Schema, API-Versionen oder Config treffen — immer verifizieren
 
-## Agent-Routing
+## Agent-Routing (v3 Architektur)
 
-**Claude Code** (ich) ist zuständig für:
-- Code schreiben, editieren, refactoren
-- Tests, Lint, Build, Diffs
+**Claude Code** (ich) — Builder:
+- Code, Tests, Lint, Build, Diffs, Commits, Deploys
 - Supabase Migrations + Edge Functions
 - n8n Workflow-Konfiguration
-- Commits, Deploys (Vercel)
-- Reviews und Architektur
+- Reviews, Architektur, Security
+- GTM-Strategie + Skill-gestützte Planung (solo-founder-gtm, positioning-icp, gtm-metrics)
 
-**OpenClaw/Jarvis** ist zuständig für:
-- Mobile/WhatsApp-Anfragen
-- Zeitgesteuerte Tasks (Cron, Heartbeat)
-- Research (Firmen, Leads, Markt)
-- CRM-Pflege und Follow-ups
-- DM/Email-Drafts
-- Tages-/Wochenbriefings
+**Jarvis Agent 1: Operator** — Mobiler Haupteinstieg:
+- Kurzfragen, Routing, Status-Checks
+- "Mach X und gib mir Ergebnis"
 
-**Regel:** Wenn Adam über Jarvis Code-Arbeit anfragt → Jarvis verweist an Claude Code.
+**Jarvis Agent 2: Website Patch Runner:**
+- Kleine Copy-/CTA-Änderungen, Build, Screenshot zurück
+- Grenze: keine großen Refactors → an Claude Code verweisen
+
+**Jarvis Agent 3: Sales Research & Drafting:**
+- Firmen-Research (Brave + linkedin-cli)
+- Lead-Briefs, DM-/Mail-Drafts (cold-outreach, cold-email-writer)
+- Discovery-Prep
+- Grenze: kein LinkedIn-Autosend
+
+**Jarvis Agent 4: KPI / CRM Assistant:**
+- Tagesbriefing (HEARTBEAT.md Format)
+- Follow-up-Liste, Wochenreview
+- CRM-Pflege (leads.md, pipeline.md)
+
+**Regeln:**
+- Code-Arbeit über WhatsApp → Jarvis verweist an Claude Code
+- Skills kombinieren wenn sinnvoll (z.B. /write-dm zieht social-selling + cold-outreach + CRM-Daten)
+
+## Skill-Routing (Claude Code)
+
+| Skill | Wann nutzen | Beispiel-Trigger |
+|-------|------------|------------------|
+| `solo-founder-gtm` | GTM-Strategie, Time-Split, Stage-Entscheidungen, Hiring-Fragen | "Wie soll ich meine Zeit aufteilen?", "Wann erste Hire?" |
+| `positioning-icp` | ICP schaerfen, Messaging-Architektur, PMF-Validierung | "Wer ist mein idealer Kunde?", "Passt der ICP?" |
+| `social-selling` | LinkedIn-Profil, DM-Sequenzen, Content-Strategie, Algorithm | "LinkedIn optimieren", "DM-Sequenz bauen" |
+| `lead-enrichment` | Lead-Daten anreichern, ICP-Scoring, Waterfall-Design | "Lead scoren", "Daten anreichern" |
+| `gtm-metrics` | KPIs definieren, Dashboard bauen, Weekly Review | "Welche Metriken tracken?", "Weekly Review" |
+| `ai-sdr` | SDR-Workflow designen, Qualification-Automation | "Outreach automatisieren", "SDR aufsetzen" |
+| `write-dm` | Konkrete DM/Email fuer einen Lead draftten | "Schreib DM fuer [Firma]" |
+| `research-firm` | Tiefenrecherche zu einer spezifischen Firma | "Recherchier [Firma]" |
+| `discovery-prep` | Call-Vorbereitung fuer einen konkreten Lead | "Call mit [Firma] vorbereiten" |
+
+**Regel:** Skills kombinieren wenn sinnvoll. Beispiel: `/write-dm` zieht automatisch `social-selling` (DM-Framework) + `cold-outreach` (Personalisierung) + Lead-Daten aus CRM.
 
 ## Cost-Awareness
 - Opus nur wenn der Task es rechtfertigt (~$0.10/Call)
