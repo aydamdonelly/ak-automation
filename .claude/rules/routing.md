@@ -18,6 +18,25 @@
 - **Memory MCP**: Bestätigte Fakten speichern/abrufen (nur: decision, lead_fact, learning, ops_status)
 - **WebSearch**: Bei externen Tools, Services, ToS-Fragen, aktuellen Versionen — nicht raten, recherchieren
 
+## Über den Tellerrand schauen (WICHTIG)
+
+Parametrisches Wissen reicht nicht. Wenn ich auf eine Grenze stosse, ist die Antwort NICHT "das geht nicht" — sondern: recherchieren was es gibt.
+
+Trigger-Situationen:
+- "LinkedIn blockt Zugriff" → WebSearch: gibt es Tools/Skills die das lösen?
+- "Ich weiß nicht wie XY funktioniert" → Context7 oder WebSearch, nicht raten
+- "Das hab ich noch nie gemacht" → WebSearch nach Best Practices, nicht improvisieren
+- "Mein Ansatz funktioniert nicht" → WebSearch ob andere das Problem gelöst haben
+- Generell: Wenn eine Lösung limitiert wirkt, 5 Min recherchieren ob es bessere gibt
+
+Konkret:
+- ClawHub/AgentSkills durchsuchen wenn ein Agent-Capability fehlt
+- WebSearch wenn ich unsicher bin ob mein Wissen aktuell ist
+- Context7 wenn ich Library-APIs nutze die ich nicht 100% kenne
+- Nie eine Einschränkung akzeptieren ohne zumindest kurz zu prüfen ob sie lösbar ist
+
+Das gilt GENAUSO für Jarvis (in SOUL.md gespiegelt).
+
 ## Fehler-Prävention
 
 - VOR jeder Migration: `mcp__supabase__execute_sql` → Schema prüfen

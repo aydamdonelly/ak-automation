@@ -15,3 +15,4 @@ paths:
 - Context7 MCP bei unbekannten Library-APIs nutzen (Docs holen vor Implementierung)
 - Tailwind v4: `@import "tailwindcss"`, `@plugin`, `@theme` inline, kanonische Klassen (max-w-350 statt arbitrary)
 - Package Manager: bun (nicht npm, nicht yarn)
+- Keine Em-Dashes (—) in User-facing Texten. Stattdessen sorgsam umformulieren: Komma, Punkt, Doppelpunkt, oder weglassen. Nicht einfach 1:1 durch Bindestriche ersetzen.
